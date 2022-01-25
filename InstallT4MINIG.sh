@@ -108,34 +108,7 @@ cat /proc/driver/nvidia/version
 nvcc -V
 nvidia-smi
 
-#install Optional libraries
-sudo apt-get install g++ freeglut3-dev build-essential libx11-dev libxmu-dev libxi-dev libglu1-mesa libglu1-mesa-dev
-sudo apt-get install zlib1g
-
-
-#Install controler tensorflow-gpu keras
-pip3 install keras
-pip3 install tensorflow-gpu keras
-conda install -c conda-forge keras 
-conda install -c anaconda tensorflow-gpu 
-
-
-#Install controler Tensorflow & Pytorch for Python
-#pip install tensorflow keras 
-#pip install tensorflow-gpu keras
-pip3 install tensorflow-addons
-pip3 install tensorflow-datsets
-pip3 install tensorflow_datasets
-
 conda activate tf
-
-#conda create -n fastai -c fastai -c pytorch fastai
-# conda activate fastai
-# #Tensorflow & Torch for R
-# install.packages(keras, repos="http://cran.r-project.org", dependencies=TRUE)
-# keras::install_keras(tensorflow = "gpu")
-# reticulate::py_config() 
-# reticulate::py_module_available("keras")
 
 cd /
 echo "pro" > ./content/.config/active_config
@@ -150,7 +123,7 @@ echo > ~/.local/share/jupyter/runtime/notebook_cookie_secret
 pkill -1 -f ipykernel_launcher
 
 clear
-nvidia-smi -L
+nvidia-smi
 echo "***    ****   ******  ***     ***"
 echo "                                  "
 echo "**    1. PAGE 1. COLAB (Start Keep Running...) - REFRESH - resource gpu,drive,system ram faild      ******"
